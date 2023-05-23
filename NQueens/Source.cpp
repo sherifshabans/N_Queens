@@ -55,9 +55,12 @@ int main()
     // Solve the N-Queens problem starting from the first row and an empty queens vector
     solve(0, {});
 
+    // Print the number of solutions
+    cout << (int)res.size() << endl;
+
     // Print the solutions
     for (auto i : res) {
-        // Create a grid of size N*N and initialize all cells with '.'(empty cells)
+        // Create a grid of size N*N and initialize all cells with '.'
         vector<vector<char>> grid(n, vector<char>(n, '.'));
 
         // Place queens on the grid based on the current solution
@@ -67,7 +70,7 @@ int main()
         // Print the grid
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < n; ++j) {
-                cout << grid[i][j];
+                cout << grid[i][j] << ' ';
             }
             cout << endl;
         }
